@@ -104,6 +104,15 @@ public class Application {
 }
 ```
 
+Expected output:
+
+```console
+Sep 20, 2020 4:26:26 PM br.com.jna.Application main
+INFO: Function SUM v1 : 20
+Sep 20, 2020 4:26:26 PM br.com.jna.Application main
+INFO: Function SUM v2 : 400
+```
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
