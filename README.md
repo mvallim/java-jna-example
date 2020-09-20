@@ -2,6 +2,8 @@
 
 This chapter will show you how to use JAVA JNA.
 
+> See a brief summary here: https://en.wikipedia.org/wiki/Java_Native_Access
+
 ## Own Library
 
 ### Header
