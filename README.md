@@ -85,6 +85,23 @@ public class FunctionsNative implements FunctionsLibrary {
 }
 ```
 
+## Assert test
+
+```java
+public class FunctionsNativeTest {
+
+  @Test
+  public void testSum() throws IOException {
+    final FunctionsNative functionsV1 = new FunctionsNative("lib/v1/libfunctions.so");
+    final FunctionsNative functionsV2 = new FunctionsNative("lib/v2/libfunctions.so");
+
+    assertThat(functionsV1.sum(10, 10), equalTo(20));
+    assertThat(functionsV2.sum(10, 10), equalTo(400));
+  }
+
+}
+```
+
 ## Example Application
 
 ```java
