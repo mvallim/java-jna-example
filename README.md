@@ -2,7 +2,9 @@
 
 This chapter will show you how to use JAVA JNA.
 
-## Own Library header
+## Own Library
+
+### Header
 
 ```c
 #include <stdio.h>
@@ -11,7 +13,7 @@ This chapter will show you how to use JAVA JNA.
 int sum(int n1, int n2);
 ```
 
-## Own Library implementation V1
+### Implementation V1
 
 ```c
 #include <stdio.h>
@@ -23,7 +25,7 @@ int sum(int n1, int n2) {
 }
 ```
 
-## Own Library implementation V2
+### Implementation V2
 
 ```c
 #include <stdio.h>
@@ -33,6 +35,16 @@ int sum(int n1, int n2) {
 int sum(int n1, int n2) {
   return (n1+n2) * 20;
 }
+```
+
+### Compile shared library
+
+```shell
+gcc -c -fPIC functions-v1.c -o lib/v1/functions.o
+gcc -c -fPIC functions-v2.c -o lib/v2/functions.o
+
+gcc -shared -o lib/v1/libfunctions.so lib/v1/functions.o
+gcc -shared -o lib/v2/libfunctions.so lib/v2/functions.o
 ```
 
 ## Function Mapping
